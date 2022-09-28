@@ -97,7 +97,7 @@ const getMostCommonLanguages = list => {
   const ocurrencies = {};
   let commons = [];
 
-  const allLanguages = list.map(currentItem => currentItem.languages).reduce((prev, current) => {
+  const allLanguages = list.map(currentItem => Array.from(new Set(currentItem.languages))).reduce((prev, current) => {
         return current ? prev.concat(current) : prev;
       });
 
