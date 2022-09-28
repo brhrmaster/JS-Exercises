@@ -24,7 +24,7 @@ const isDivisibleBy3And5 = value => isDivisibleBy3(value) && isDivisibleBy5(valu
 const getEvaluatedResult = value => {
 	if (isDivisibleBy3And5(value)) return 'Visual Nuts';
 	else if (isDivisibleBy3(value)) return 'Visual';
-	else if (isDivisibleBy5(value)) 'Nuts';
+	else if (isDivisibleBy5(value)) return 'Nuts';
 	
 	return value;
 };
