@@ -123,13 +123,10 @@ describe('Unit tests for number evaluation useCases', () => {
       it('Should return handled error when getting an exception', () => {
         request.payload = {
         };
-        mockDependencies.useCases.numberEvaluationUseCase.generateNumberList = () => {
-          throw new Error('Internal server error');
-        };
         const response = adapters(mockDependencies).getNumberList(request);
         expect(response).to.be.an('object');
         expect(response.statusCode).to.be.eq(500);
-        expect(response.message).to.be.eq('Error: Internal server error');
+        expect(response.message).to.be.eq('Error: Invalid number');
       });
     });
   });

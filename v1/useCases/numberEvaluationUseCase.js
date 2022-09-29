@@ -22,6 +22,8 @@ const numberEvaluationUseCase = () => {
   }) => {
     const sourceData = [];
 
+    if (typeof startNumber !== 'number' || typeof endNumber !== 'number') throw Error('Invalid number');
+
     if (startNumber === 0 && endNumber === 0) return sourceData;
 
     if (startNumber > endNumber) {
