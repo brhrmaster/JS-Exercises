@@ -1,0 +1,87 @@
+{
+  "name": "ms-js-exercises",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "index.js",
+  "engines": {
+    "node": "^16.17.0",
+    "npm": "^8.15.0"
+  },
+  "scripts": {
+    "check": "depcheck --ignores husky,eslint-config-airbnb,sinon,chai",
+    "start": "node index.js",
+    "watch": "mocha test/**/unit/**/*.spec.js --recursive --bail --watch",
+    "pretest": "npm run lint && npm run check",
+    "test": "npm run test:coverage",
+    "test:all": "npm run test:coverage && npm run test:integration",
+    "test:unit": "mocha --recursive test/**/unit",
+    "test:integration": "mocha --recursive test/**/integration",
+    "test:coverage": "nyc --all --reporter=html --reporter=text  mocha --recursive test",
+    "lint": "eslint *.js .",
+    "lint:fix": "eslint --fix *.js .",
+    "dev": "nodemon index.js",
+    "prepush": "npm test",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brhrmaster/JS-Exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brhrmaster/JS-Exercises/issues"
+  },
+  "homepage": "https://github.com/brhrmaster/JS-Exercises#readme",
+  "devDependencies": {
+    "@babel/core": "7.18.10",
+    "@babel/eslint-parser": "^7.18.9",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "depcheck": "^1.4.3",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "nyc": "^15.1.0",
+    "sinon": "^14.0.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.1.0",
+    "@fastify/swagger": "^7.4.1",
+    "ajv": "^8.11.0",
+    "dotenv": "^16.0.2",
+    "fastify": "^4.5.3",
+    "fastify-healthcheck": "^4.1.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "reporter": [
+      "text",
+      "text-summary",
+      "html",
+      "lcov"
+    ],
+    "reporting": {
+      "print": "both"
+    },
+    "include": [
+      "**/adapters/**/*.js",
+      "**/useCases/**/*.js"
+    ],
+    "exclude": [
+      "test-report/**/*",
+      "test/**/*",
+      "coverage/**/*",
+      "v1/useCases/index.js"
+    ]
+  }
+}
