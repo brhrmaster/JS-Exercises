@@ -19,7 +19,7 @@ node index.js
 When running localy:
 
 ```
-http://localhost:3001/api/msjsexercises/docs
+http://localhost/api/msjsexercises/docs
 ```
 
 ## Run Tests

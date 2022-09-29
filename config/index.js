@@ -6,7 +6,7 @@ module.exports = {
   application: serviceName,
   environment: process.env.NODE_ENV,
   app: {
-    port: process.env.PORT || '3001',
+    port: process.env.PORT || '80',
   },
   logs: {
     application: serviceName,
