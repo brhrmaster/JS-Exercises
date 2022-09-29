@@ -22,7 +22,7 @@ const numberEvaluationUseCase = () => {
   }) => {
     const sourceData = [];
 
-    if (typeof startNumber !== 'number' || typeof endNumber !== 'number') throw Error('Invalid number');
+    if (typeof startNumber !== 'number' || typeof endNumber !== 'number') throw Error('Invalid params');
 
     if (startNumber === 0 && endNumber === 0) return sourceData;
 

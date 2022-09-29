@@ -126,7 +126,7 @@ describe('Unit tests for number evaluation useCases', () => {
         const response = adapters(mockDependencies).getNumberList(request);
         expect(response).to.be.an('object');
         expect(response.statusCode).to.be.eq(500);
-        expect(response.message).to.be.eq('Error: Invalid number');
+        expect(response.message).to.be.eq('Error: Invalid params');
       });
     });
   });
