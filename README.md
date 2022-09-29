@@ -9,21 +9,24 @@
 ```
 node index.js
 ```
-## Run Tests
 
-How to run the tests
-
-```
-npm run test
-```
-
-## Call API
+## API on Swagger
 
 When running localy:
 
 ```
 http://localhost:3001/api/msjsexercise/docs
 ```
+
+## Run Tests
+
+How to run the tests:
+
+```
+npm run test:coverage
+```
+
+and check out the file {root}/coverage/index.html
 
 ## Env Content
 
