@@ -11,7 +11,7 @@ npm install
 ```
 
 ```
-node index.js
+npm start
 ```
 
 ## API on Swagger
