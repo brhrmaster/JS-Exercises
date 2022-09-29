@@ -4,7 +4,6 @@ const sinon = require('sinon');
 const { enums } = require('../../../commons/utils');
 const adapters = require('../../../v1/adapters');
 const useCases = require('../../../v1/useCases');
-// const mocks = require('../../mocks');
 
 chai.use(chaiAsPromised);
 const { expect } = chai;
